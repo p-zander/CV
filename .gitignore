@@ -1,5 +1,16 @@
+
+personalinfo.tex
+
 # latex
 *.aux
 *.log
 *.out
+*.synctex.gz
 *.pdf
+*.fls
+
+# latexmk
+*.fdb_latexmk
+
+# sublime
+*.sublime-*
