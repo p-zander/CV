@@ -8,40 +8,46 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
+% \usepackage{savesym}
+% \savesymbol{fax}
+% \usepackage{marvosym} % forgot what I needed this for
+
+\definecolor{color1}{RGB}{132,184,24} % TUgreen
 % moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+% \moderncvcolor{blue}                             % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                   % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                        % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\usepackage[scale=0.76]{geometry}
+\setlength{\hintscolumnwidth}{3.6cm}               % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{John}{Doe}
-\title{ResumÃ© title}                               % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+2~(345)~678~901}
-\phone[fax]{+3~(456)~789~012}
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\input{personalinfo.tex} % no need to push this to repo
+\name{Philipp}{Zander}
+\title{curriculum vit\ae{}}                          % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+% \phone[fixed]{+2~(345)~678~901}
+% \phone[fax]{+3~(456)~789~012}
+\email{philipp.zander@\\tu-dortmund.de} % hate this *at* symbol % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+% \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+% \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{p-zander}                            % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[95pt][0.4pt]{foto.jpg}                        % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{It's always 5 o'clock somewhere -- Benjamin Franklin} % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
 
@@ -57,75 +63,51 @@
 \makecvtitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2011 -- 2014}{Bachelor of Science}{Technical University Dortmund}{}{\textit{1.6\,}}{}
+\cventry{2014 -- Mar 2017}{Master of Science}{Technical University Dortmund}{}{}{}
 
 \section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+\cvitem{title}{\emph{Tests of light quark Yukawa couplings with EDM}}
+\cvitem{supervisor}{Jun.-Prof. Joachim Brod}
+\cvitem{abstract}{Electric dipole moments of particles such as the neutron are sensitive to the amount of \textit{CP}-violation in the standard model of particle physics. Introducing new \textit{CP}-odd Yukawa couplings gives rise to the quark EDM and consequently to the neutron EDM. In this work the existing constraints on the neutron EDM have been used to contrain the newly introduced Higgs-fermion couplings.}
 
 \section{Experience}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\cventry{Jun 2016 -- today}{Student assistant in production and QA}{\newline{}Chair of experimental Physics 5a, TU Dortmund}{44227 Dortmund}{GER}{Assistant during the first stages of serial production of scintillating fiber mats for the SciFi Tracker of LHCb, scheduled to be installed during LS2 of the LHC}% in 2019/20}
+\cventry{Apr 2015 -- Jan 2016}{Student assistant in QA}{\newline{}Chair of experimental Physics 5a, TU Dortmund}{44227 Dortmund}{GER}{Developement of computer vision software for experimental live QA of the production process of scintillating fiber mats for the SciFi Tracker of LHCb}
+\cventry{Dec 2013 -- Dec 2014}{Research assistant}{\newline{}Chair of High Frequency Techniques, TU Dortmund}{44227 Dortmund}{GER}{Further developement of algorithms within  the  frequency and timed domain for simulation of beam  propagation in guided-wave devices in integrated  optics}
+% \section*{}
+\newpage
+\cventry{Dec 2013 -- Mar 2015}{Student assistant in teaching}{\newline{}Physics Faculty, TU Dortmund}{44227 Dortmund}{GER}{}
+\cventry{Oct 2012 -- Mar 2013}{Student assistant in teaching}{\newline{}Computer Science Faculty, TU Dortmund}{44227 Dortmund}{GER}{}
 
 \section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\cvitem{German}{native speaker}
+\cvitem{English}{good working knowledge}
 
 \section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\cvitem{C/C\tiny$\raisebox{2pt}{++}$}{Eigen, ROOT, Boost}
+\cvitem{Python}{sympy, pyROOT, matplotlib, numpy}
+\cvitem{MatLab}{}
+\cvitem{\LaTeX}{\rotatebox{0}{\reflectbox{\LaTeX}}}
 
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Space}{Description}
+\cvitem{Tech}{Description}
+\cvitem{Gaming}{Description}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
+% \section{References}
+% \begin{cvcolumns}
+%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
@@ -140,7 +122,7 @@ Detailed achievements:%
 %-----       letter       ---------------------------------------------------------
 % recipient data
 \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
+\date{\today}
 \opening{Dear Sir or Madam,}
 \closing{Yours faithfully,}
 \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
@@ -158,7 +140,7 @@ Albert Einstein discovered that $e=mc^2$ in 1905.
 
 \makeletterclosing
 
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+%\clearpage\end{CJK*} % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
